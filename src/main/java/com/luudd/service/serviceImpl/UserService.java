@@ -37,7 +37,6 @@ public class UserService implements IUserService {
 		
 		userdto.setUserId(user.getUserId());
 		userdto.setUserName(user.getUserName());
-		userdto.setUserRole(user.getUserRole());
 		return userdto;
 	}
 
@@ -47,7 +46,6 @@ public class UserService implements IUserService {
 		for (User user : userList) {
 			if(id == user.getUserId()) {
 				user.setUserName(user.getUserName());
-				user.setUserRole(user.getUserRole());
 				return user;
 			}
 		}
@@ -85,7 +83,6 @@ public class UserService implements IUserService {
 			UserDTO userDTO = new UserDTO();
 			userDTO.setUserName(user.getUserName());
 			userDTO.setUserId(user.getUserId());
-			userDTO.setUserRole(user.getUserRole());
 			userDTOList.add(userDTO);
 		}
 		return userDTOList;
