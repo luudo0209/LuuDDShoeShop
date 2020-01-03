@@ -10,12 +10,10 @@ import com.luudd.model.dto.ProductDTO;
 public class ProductMapper {
     public ProductDTO toProductDTo(Product product){
         ProductDTO productDTO = new ProductDTO();
-        productDTO.setCategoryId(product.getCategoryId());
         productDTO.setDescription(product.getDescription());
         productDTO.setGenderFor(product.getGenderFor());
         productDTO.setPrice(product.getPrice());
         productDTO.setProductName(product.getProductName());
-        productDTO.setProductId(product.getProductImageId());
         return productDTO;
     }
 }
