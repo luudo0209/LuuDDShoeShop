@@ -12,7 +12,6 @@ import javax.validation.constraints.NotNull;
 @Data
 public class ProductRequest {
     @NotNull(message = "Category is required")
-    @NotEmpty(message = "Category is required")
     @ApiModelProperty(
             example="Duc Luu",
             notes="Category cannot be empty",
