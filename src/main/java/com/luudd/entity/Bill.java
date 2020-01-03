@@ -2,12 +2,9 @@ package com.luudd.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,18 +15,23 @@ public class Bill extends BaseEntity {
 	@Column
 	private int billId;
 	@Column
-	private int productId;
-	@Column
-	private int userId;
-	@Column
-	private int categoryId;
-	@Column
 	private int quantity;
 	@Column
 	private float totalPrice;
 	@Column
 	private float discount;
 
-	
+	@OneToMany(
+			cascade = CascadeType.ALL,
+			orphanRemoval = true
+	)
+	private List<Product> products = new ArrayList<>();
+
+	@OneToMany(
+			cascade = CascadeType.ALL,
+			orphanRemoval = true
+	)
+	private List<Category> categories = new ArrayList<>();
+
 	
 }

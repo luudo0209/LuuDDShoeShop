@@ -1,13 +1,11 @@
 package com.luudd.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,10 +19,18 @@ public class User extends BaseEntity {
 	@Column
 	private String userName;
 	@Column
-	private int userRole;
-	@Column
 	private String userPassword;
 	@Column
 	private String phoneNumber;
-	
+
+	@ManyToMany(cascade = {
+			CascadeType.PERSIST,
+			CascadeType.MERGE
+	})
+	@JoinTable(name = "user_role",
+			joinColumns = @JoinColumn(name = "user_id"),
+			inverseJoinColumns = @JoinColumn(name = "role_id")
+	)
+	private List<Role> roles = new ArrayList<>();
+
 }

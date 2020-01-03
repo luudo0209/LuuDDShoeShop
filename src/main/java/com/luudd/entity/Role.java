@@ -25,27 +25,9 @@ public class Role extends BaseEntity{
 	
 	@Column
 	private int roleName;
-	
-	/*
-	 * private List<User> users = new ArrayList<>();
-	 * 
-	 * public List<User> getUsers() { return users; }
-	 * 
-	 * @ManyToMany(mappedBy = "roles") public void setUsers(List<User> users) {
-	 * this.users = users; }
-	 */
-	public int getRoleName() {
-		return roleName;
-	}
 
-	public void setRoleName(int roleName) {
-		this.roleName = roleName;
-	}
-
-
-	public int getRoleId() {
-		return roleId;
-	}
+	@ManyToMany(mappedBy = "roles")
+	private List<User> users = new ArrayList<>();
 	
 	
 }

@@ -2,12 +2,8 @@ package com.luudd.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -20,5 +16,8 @@ public class Category extends BaseEntity {
 	private int categoryId;
 	@Column
 	private String categoryName;
+
+	@OneToMany(mappedBy = "category")
+	private List<Product> products;
 	
 }
