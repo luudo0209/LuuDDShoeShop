@@ -33,14 +33,6 @@ public class ProductService implements IProductService {
         Product product = new Product();
         ProductImage images = new ProductImage();
         Date date = new Date();
-        //Create productDTO
-       /* productDTO.setProductName(productRequest.getProductName());
-        productDTO.setPrice(productRequest.getPrice());
-        productDTO.setGenderFor(productRequest.getGenderFor());
-        productDTO.setDescription(productRequest.getDescription());
-        productDTO.setProductImage(productRequest.getProductImage());
-        productDTO.setSize(productRequest.getSize());*/
-        //productDTO.setCategory();
         //Create product
         product.setProductName(productRequest.getProductName());
         product.setPrice(productRequest.getPrice());
@@ -79,8 +71,9 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void deleteProduct(int id) {
-
+    public String deleteProduct(int id) {
+        productRepository.deleteById(id);
+        return "Success";
     }
 
     @Override
@@ -91,6 +84,12 @@ public class ProductService implements IProductService {
 
     @Override
     public ProductDTO searchProductByName(String name) {
+        List<ProductDTO> productDTOList = getAllProducts();
+        for (ProductDTO productDTO: productDTOList){
+            if (name.equalsIgnoreCase(productDTO.getProductName())){
+                return productDTO;
+            }
+        }
         return null;
     }
 

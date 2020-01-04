@@ -15,7 +15,7 @@ public interface IProductService {
 
     public ProductDTO updateProduct(ProductRequest productRequest, int id);
 
-    public void  deleteProduct(int id);
+    public String  deleteProduct(int id);
 
     public ProductDTO getProductById(int id);
 
