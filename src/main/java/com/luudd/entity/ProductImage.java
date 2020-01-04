@@ -2,12 +2,8 @@ package com.luudd.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,6 +15,10 @@ public class ProductImage extends BaseEntity {
 	@Column
 	private int productImageId;
 	@Column
-	private String image;
+	private String images;
+	/*@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "product_id", nullable = false)
+	private Product product;*/
+
 
 }

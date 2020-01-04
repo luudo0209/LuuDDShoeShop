@@ -27,11 +27,11 @@ public class Bill extends BaseEntity {
 	)
 	private List<Product> products = new ArrayList<>();
 
-	@OneToMany(
+	/*@OneToMany(
 			cascade = CascadeType.ALL,
 			orphanRemoval = true
 	)
-	private List<Category> categories = new ArrayList<>();
+	private List<Category> categories = new ArrayList<>();*/
 
 	
 }

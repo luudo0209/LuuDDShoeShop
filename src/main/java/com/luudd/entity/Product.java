@@ -1,10 +1,7 @@
 package com.luudd.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Entity
@@ -18,11 +15,10 @@ public class Product extends BaseEntity {
 	private String productName;
 	@Column
 	private String description;
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    private List<ProductImage> productimages = new ArrayList<>();
+  	@Column
+    private String productImage;
+	/*@Column
+	private  String image;*/
 	@Column
 	private float price;
 	@Column
@@ -32,6 +28,5 @@ public class Product extends BaseEntity {
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
-	
-	
+
 }
