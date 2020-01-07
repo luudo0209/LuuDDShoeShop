@@ -20,6 +20,8 @@ public class Bill extends BaseEntity {
 	private float totalPrice;
 	@Column
 	private float discount;
+	@Column
+	private int productId;
 
 	@OneToMany(
 			cascade = CascadeType.ALL,

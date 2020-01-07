@@ -19,5 +19,4 @@ public class BaseEntity {
 	private String updatedBy;
 	@Column
 	private Date updatedAt;
-
 }

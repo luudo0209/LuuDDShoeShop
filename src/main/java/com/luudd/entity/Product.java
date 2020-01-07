@@ -2,6 +2,7 @@ package com.luudd.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -15,18 +16,18 @@ public class Product extends BaseEntity {
 	private String productName;
 	@Column
 	private String description;
-  	@Column
-    private String productImage;
-	/*@Column
-	private  String image;*/
 	@Column
 	private float price;
 	@Column
 	private double size;
 	@Column
 	private String genderFor;
+//	@Column
+//	private int categoryId;
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
 
+	@OneToMany(mappedBy = "product")
+	private List<ProductImage> productImages ;
 }

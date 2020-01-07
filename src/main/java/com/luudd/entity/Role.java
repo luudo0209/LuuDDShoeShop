@@ -22,12 +22,11 @@ public class Role extends BaseEntity{
    	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private int roleId;
-	
 	@Column
-	private int roleName;
+	private String roleName;
 
-	@ManyToMany(mappedBy = "roles")
-	private List<User> users = new ArrayList<>();
+//	@ManyToMany(mappedBy = "roles")
+//	private List<User> users = new ArrayList<>();
 	
 	
 }

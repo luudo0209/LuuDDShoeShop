@@ -22,7 +22,6 @@ public class User extends BaseEntity {
 	private String userPassword;
 	@Column
 	private String phoneNumber;
-
 	@ManyToMany(cascade = {
 			CascadeType.PERSIST,
 			CascadeType.MERGE

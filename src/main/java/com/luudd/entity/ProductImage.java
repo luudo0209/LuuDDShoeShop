@@ -15,10 +15,14 @@ public class ProductImage extends BaseEntity {
 	@Column
 	private int productImageId;
 	@Column
-	private String images;
+	private String link;
+	/*@Column
+	private int productId;*/
 	/*@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "product_id", nullable = false)
 	private Product product;*/
-
+	@ManyToOne
+	@JoinColumn(name = "product_id")
+	private Product product;
 
 }
