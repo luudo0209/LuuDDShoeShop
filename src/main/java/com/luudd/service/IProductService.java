@@ -1,5 +1,6 @@
 package com.luudd.service;
 
+import com.luudd.entity.Category;
 import com.luudd.entity.Product;
 import com.luudd.model.dto.ProductDTO;
 import com.luudd.model.request.ProductRequest;
