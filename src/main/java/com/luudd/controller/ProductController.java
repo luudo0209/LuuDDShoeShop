@@ -1,5 +1,6 @@
 package com.luudd.controller;
 
+import com.luudd.entity.Category;
 import com.luudd.model.dto.ProductDTO;
 import com.luudd.model.request.ProductRequest;
 import com.luudd.service.serviceImpl.ProductService;
@@ -26,6 +27,7 @@ public class ProductController {
     })
     @PostMapping("/api/products")
     public ResponseEntity<?> createProduct(@RequestBody @Valid ProductRequest productRequest) {
+        Category category = new Category();
         ProductDTO product = productService.createProduct(productRequest);
         return ResponseEntity.ok(product);
     }
