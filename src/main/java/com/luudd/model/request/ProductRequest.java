@@ -14,16 +14,11 @@ import java.util.List;
  */
 @Data
 public class ProductRequest {
-    @ApiModelProperty(
-            example="Duc Luu",
-            notes="Category cannot be empty",
-            required=true
-    )
-    private @NotNull(message = "Category is required") Category category;
     private @NotNull @NotEmpty String productName;
     private @NotNull String description;
-    private @NotNull @NotEmpty String productImage;
     private  @NotNull float price;
     private @NotNull double size;
     private @NotNull @NotEmpty String genderFor;
+    private @NotNull Long categoryId;
+    //private  Category category;
 }
