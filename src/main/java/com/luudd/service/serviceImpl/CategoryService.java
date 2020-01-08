@@ -85,7 +85,9 @@ public class CategoryService implements ICategoryService {
     public String deleteCategory(int id) {
         if (id >= 0){
             categoryRepository.deleteById(id);
+            return "Success";
         }
-        return "Success";
+        return "Unsuccess";
+
     }
 }
