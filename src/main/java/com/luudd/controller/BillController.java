@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Created by Do Duc Luu on 1/7/2020.
  */
+@CrossOrigin
 @RestController
 public class BillController {
 
