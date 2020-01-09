@@ -43,10 +43,12 @@ public class UserService implements IUserService {
 	@Override
 	public User updateUser(UserRequest userRequest, int id) {
 		List<User> userList = userRepository.findAll();
-		for (User user : userList) {
-			if(id == user.getUserId()) {
-				user.setUserName(user.getUserName());
-				return user;
+		if ( userList != null ) {
+			for (User user : userList) {
+				if ( id == user.getUserId() ) {
+					user.setUserName(user.getUserName());
+					return user;
+				}
 			}
 		}
 		return null;
@@ -67,9 +69,11 @@ public class UserService implements IUserService {
 	@Override
 	public UserDTO searchByName(String keyword) {
 		List<UserDTO> userDTOList = getAllUsers();
-		for (UserDTO userDTO : userDTOList) {
-			if(keyword.equals(userDTO.getUserName())) {
-				return userDTO;
+		if ( !keyword.isEmpty() ) {
+			for (UserDTO userDTO : userDTOList) {
+				if(keyword.equals(userDTO.getUserName())) {
+					return userDTO;
+				}
 			}
 		}
 		return null;

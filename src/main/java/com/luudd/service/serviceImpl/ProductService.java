@@ -88,8 +88,12 @@ public class ProductService implements IProductService {
 
     @Override
     public String deleteProduct(int id) {
-        productRepository.deleteById(id);
-        return "Success";
+        if ( id >= 0 ) {
+            productRepository.deleteById(id);
+            return "Success";
+        } else {
+            return "Unsucess";
+        }
     }
 
     @Override
@@ -112,9 +116,12 @@ public class ProductService implements IProductService {
     public List<ProductDTO> getAllProducts() {
         List<Product> productList = productRepository.findAll();
         List<ProductDTO> productDTOList = new ArrayList<>();
-        for (Product product: productList) {
-            productDTOList.add(ProductMapper.toProductDTo(product));
+        if ( productList != null ) {
+            for (Product product : productList) {
+                productDTOList.add(ProductMapper.toProductDTo(product));
+            }
+            return productDTOList;
         }
-        return productDTOList;
+        return null;
     }
 }

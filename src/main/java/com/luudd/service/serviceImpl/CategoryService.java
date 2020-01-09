@@ -35,10 +35,14 @@ public class CategoryService implements ICategoryService {
     public List<CategoryDTO> getAllCategories() {
         List<Category> categoryList = categoryRepository.findAll();
         List<CategoryDTO> categoryDTOList = new ArrayList<>();
-        for (Category category: categoryList) {
-            categoryDTOList.add(CategoryMapper.toCategoryDTO(category));
+        if ( categoryList != null ) {
+            for (Category category: categoryList) {
+                categoryDTOList.add(CategoryMapper.toCategoryDTO(category));
+            }
+            return categoryDTOList;
+        } else {
+            return null;
         }
-        return categoryDTOList;
     }
     @Transactional
     @Override
