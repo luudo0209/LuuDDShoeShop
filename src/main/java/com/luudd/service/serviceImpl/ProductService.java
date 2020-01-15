@@ -3,6 +3,8 @@ package com.luudd.service.serviceImpl;
 import com.luudd.entity.Category;
 import com.luudd.entity.Product;
 import com.luudd.entity.ProductImage;
+import com.luudd.exception.ErrorResponse;
+import com.luudd.exception.RecordNotFoundException;
 import com.luudd.model.dto.ProductDTO;
 import com.luudd.model.mapper.ProductMapper;
 import com.luudd.model.mapper.UserMapper;
@@ -36,7 +38,6 @@ public class ProductService implements IProductService {
         Product product = new Product();
         ProductImage images = new ProductImage();
         Date date = new Date();
-        try {
             Category category = iCategoryRepository.getCategoryById(productRequest.getCategoryId());
             if (category != null){
                 product.setProductName(productRequest.getProductName());
@@ -49,16 +50,17 @@ public class ProductService implements IProductService {
                 product.setCreatedBy("Luudd");
                 product.setUpdatedAt(date);
                 product.setUpdatedBy("Luudd");
+                product.setImage(productRequest.getImage());
                 productRepository.save(product);
                 return ProductMapper.toProductDTo(product);
             } else {
-                return null;
+                throw new RecordNotFoundException("Cannot create!");
             }
 
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-        return null;
+//        } catch (Exception e) {
+//            System.out.println("Error: " + e.getMessage());
+//        }
+        //return null;
     }
 
     @Transactional

@@ -30,6 +30,7 @@ public class ProductController {
     public ResponseEntity<?> createProduct(@RequestBody @Valid ProductRequest productRequest) {
         Category category = new Category();
         ProductDTO product = productService.createProduct(productRequest);
+
         return ResponseEntity.ok(product);
     }
 

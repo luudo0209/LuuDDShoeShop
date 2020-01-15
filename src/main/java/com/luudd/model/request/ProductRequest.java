@@ -20,5 +20,6 @@ public class ProductRequest {
     private @NotNull double size;
     private @NotNull @NotEmpty String genderFor;
     private @NotNull Long categoryId;
+    private String image;
     //private  Category category;
 }

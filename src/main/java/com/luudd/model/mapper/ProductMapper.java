@@ -18,6 +18,7 @@ public class ProductMapper {
         productDTO.setGenderFor(product.getGenderFor());
         productDTO.setPrice(product.getPrice());
         productDTO.setCategory_id(product.getCategory() != null ? product.getCategory().getCategoryId(): null);
+        productDTO.setImage(product.getImage());
         return productDTO;
     }
 }

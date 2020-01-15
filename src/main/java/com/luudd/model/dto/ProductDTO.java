@@ -22,4 +22,5 @@ public class ProductDTO {
     private double size;
     private String genderFor;
     private int category_id;
+    private String image;
 }
