@@ -22,7 +22,7 @@ Lấy template HTML, CSS ở đây cho nhanh, tập trung vào lập trình nghi
     Admin: Thêm sản phẩm, sửa thông tin sản phẩm, xóa sản phẩm...
 
 Đã làm được: 
-	Back end: Viết được api thêm sửa xóa sản phẩm, category, user.
+	Back end: Viết được api thêm,sửa, xóa, hiển thị sản phẩm, category, user.
 	Front end: Thêm sản phẩm, hiển thị sản phẩm, sửa sản phẩm, xóa sản phẩm.
 
 Chưa làm được:
