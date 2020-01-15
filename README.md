@@ -15,8 +15,14 @@ Lấy template HTML, CSS ở đây cho nhanh, tập trung vào lập trình nghi
     Giỏ hàng
     Thanh toán (Đăng kí- Đăng nhập- Đăng xuất)
     
-4. Liệt kê các luồng nghiệp vụ sẽ thực hiện trong khuôn khổ thời gian thực tập 1 tháng
-
-5. Hãy vẽ diagram mô tả kiến trúc ứng dụng hoặc các luồng, càng dễ hiểu, ngắn gọn càng tốt
+4. Các tính năng
     Khách hàng: Đăng nhập, đăng xuất, tìm sản phẩm, chọn, mua, thanh toán....
     Admin: Thêm sản phẩm, sửa thông tin sản phẩm, xóa sản phẩm...
+
+Đã làm được: 
+	Back end: Viết được api thêm sửa xóa sản phẩm, category, user.
+	Front end: Thêm sản phẩm, hiển thị sản phẩm
+
+Chưa làm được:
+	Back end: Sercurity, handle exception, login.
+	Front end: Sửa sản phẩm, xóa sản phẩm, tìm kiếm sản phẩm, giỏ hàng, đăng kí đăng nhập đăng xuất.
