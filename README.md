@@ -14,15 +14,17 @@ Lấy template HTML, CSS ở đây cho nhanh, tập trung vào lập trình nghi
     Loại giày
     Giỏ hàng
     Thanh toán (Đăng kí- Đăng nhập- Đăng xuất)
-    
-4. Các tính năng
+4. BackEnd: Java spring boot, IDE: Intelliji
+   FrontEnd: Angular 8, IDE: Visual studio code
+   Database: MySql
+5. Các tính năng
     Khách hàng: Đăng nhập, đăng xuất, tìm sản phẩm, chọn, mua, thanh toán....
     Admin: Thêm sản phẩm, sửa thông tin sản phẩm, xóa sản phẩm...
 
 Đã làm được: 
 	Back end: Viết được api thêm sửa xóa sản phẩm, category, user.
-	Front end: Thêm sản phẩm, hiển thị sản phẩm
+	Front end: Thêm sản phẩm, hiển thị sản phẩm,Sửa sản phẩm
 
 Chưa làm được:
 	Back end: Sercurity, handle exception, login.
-	Front end: Sửa sản phẩm, xóa sản phẩm, tìm kiếm sản phẩm, giỏ hàng, đăng kí đăng nhập đăng xuất.
+	Front end: xóa sản phẩm, tìm kiếm sản phẩm, giỏ hàng, đăng kí đăng nhập đăng xuất.
