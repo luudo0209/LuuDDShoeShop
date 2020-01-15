@@ -23,8 +23,8 @@ Lấy template HTML, CSS ở đây cho nhanh, tập trung vào lập trình nghi
 
 Đã làm được: 
 	Back end: Viết được api thêm sửa xóa sản phẩm, category, user.
-	Front end: Thêm sản phẩm, hiển thị sản phẩm,Sửa sản phẩm
+	Front end: Thêm sản phẩm, hiển thị sản phẩm, sửa sản phẩm, xóa sản phẩm.
 
 Chưa làm được:
 	Back end: Sercurity, handle exception, login.
-	Front end: xóa sản phẩm, tìm kiếm sản phẩm, giỏ hàng, đăng kí đăng nhập đăng xuất.
+	Front end:  tìm kiếm sản phẩm, giỏ hàng, đăng kí đăng nhập đăng xuất.
